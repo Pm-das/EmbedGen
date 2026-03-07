@@ -1,0 +1,34 @@
+{
+  "U0LCR": {
+    "description": "UART0 Line Control Register used to set word length, parity, stop bits, and DLAB.",
+    "effect": "Writing 0x83 enables DLAB and configures 8-bit frame format before baud divisor updates."
+  },
+  "U0DLL": {
+    "description": "UART0 Divisor Latch LSB for baud rate generation.",
+    "effect": "Sets lower 8 bits of baud divisor when DLAB is set in U0LCR."
+  },
+  "U0DLM": {
+    "description": "UART0 Divisor Latch MSB for baud rate generation.",
+    "effect": "Sets upper 8 bits of baud divisor when DLAB is enabled."
+  },
+  "U0LSR": {
+    "description": "UART0 Line Status Register indicating TX/RX state and framing errors.",
+    "effect": "Used to poll UART readiness flags like THRE and RDR before data access."
+  },
+  "AD0CR": {
+    "description": "ADC0 Control Register for channel select, clock divider, and conversion start.",
+    "effect": "Configures ADC operating mode and controls conversion trigger behavior."
+  },
+  "AD0DR1": {
+    "description": "ADC0 Data Register for channel 1 conversion result and DONE bit.",
+    "effect": "Contains 10-bit sampled value and status after conversion completes."
+  },
+  "PINSEL0": {
+    "description": "Pin function select register for port 0 lower pins.",
+    "effect": "Assigns alternate peripheral functions (UART/SPI/I2C/PWM) to pins."
+  },
+  "PINSEL1": {
+    "description": "Pin function select register for port 0 upper pins.",
+    "effect": "Maps analog/peripheral functions such as ADC channels to P0.16-P0.31."
+  }
+}
