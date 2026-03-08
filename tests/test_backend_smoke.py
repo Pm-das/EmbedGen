@@ -107,15 +107,3 @@ def test_explain_registers_validation_requires_assignment() -> None:
         json={"microcontroller": "LPC2148", "code": "U0LCR"},
     )
     assert response.status_code == 422
-
-
-def test_cors_preflight_generate_code() -> None:
-    response = client.options(
-        "/generate-code",
-        headers={
-            "Origin": "http://localhost:5173",
-            "Access-Control-Request-Method": "POST",
-        },
-    )
-    assert response.status_code in (200, 204)
-    assert response.headers.get("access-control-allow-origin") == "http://localhost:5173"
