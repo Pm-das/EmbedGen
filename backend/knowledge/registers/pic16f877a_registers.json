@@ -1,0 +1,34 @@
+{
+  "SPBRG": {
+    "description": "EUSART Baud Rate Generator register.",
+    "effect": "Defines UART baud timing together with BRGH setting."
+  },
+  "TXREG": {
+    "description": "EUSART Transmit Register.",
+    "effect": "Writing a byte triggers UART transmission when TXEN is enabled."
+  },
+  "RCREG": {
+    "description": "EUSART Receive Register.",
+    "effect": "Holds received UART data and should be read to clear receive state."
+  },
+  "ADCON0": {
+    "description": "ADC Control Register 0.",
+    "effect": "Selects ADC channel, enables ADC, and starts conversion with GO/DONE."
+  },
+  "ADCON1": {
+    "description": "ADC Control Register 1.",
+    "effect": "Configures analog pin mode and result justification/reference setup."
+  },
+  "SSPCON": {
+    "description": "Synchronous Serial Port Control register.",
+    "effect": "Configures SPI/I2C mode and enables MSSP module."
+  },
+  "SSPADD": {
+    "description": "MSSP address/baud register.",
+    "effect": "In I2C master mode it sets serial clock frequency."
+  },
+  "T1CON": {
+    "description": "Timer1 Control Register.",
+    "effect": "Sets Timer1 clock source, prescaler, and on/off state."
+  }
+}
