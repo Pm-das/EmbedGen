@@ -1,0 +1,17 @@
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+lint.select = ["E", "F", "I", "B", "UP"]
+lint.ignore = ["E501"]
+exclude = ["frontend", ".git", ".pytest_cache", "__pycache__"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["backend", "cli", "tests"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

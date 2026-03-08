@@ -1,0 +1,34 @@
+{
+  "UCSR0A": {
+    "description": "USART Control and Status Register A for UART flags.",
+    "effect": "Reports TX/RX readiness bits such as UDRE0, RXC0, and TXC0."
+  },
+  "UCSR0B": {
+    "description": "USART Control and Status Register B for UART enable and interrupts.",
+    "effect": "Enables transmitter/receiver and UART interrupt sources."
+  },
+  "UCSR0C": {
+    "description": "USART Control and Status Register C for frame format configuration.",
+    "effect": "Controls data bits, parity mode, and stop-bit selection."
+  },
+  "UBRR0H": {
+    "description": "USART Baud Rate Register high byte.",
+    "effect": "Upper byte of baud divisor used with UBRR0L."
+  },
+  "UBRR0L": {
+    "description": "USART Baud Rate Register low byte.",
+    "effect": "Lower byte of baud divisor used to achieve target baud."
+  },
+  "ADCSRA": {
+    "description": "ADC Control and Status Register A.",
+    "effect": "Enables ADC, starts conversion, and sets ADC prescaler."
+  },
+  "ADMUX": {
+    "description": "ADC Multiplexer Selection Register.",
+    "effect": "Chooses ADC input channel and voltage reference."
+  },
+  "SPCR": {
+    "description": "SPI Control Register.",
+    "effect": "Sets SPI mode, master/slave role, and clock rate prescaler bits."
+  }
+}
