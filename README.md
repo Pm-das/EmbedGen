@@ -93,7 +93,7 @@ flowchart TD
 ### 1) Clone
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Pm-das/EmbedGen.git
 cd EmbedGen
 ```
 
