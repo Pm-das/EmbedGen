@@ -43,10 +43,8 @@ def generate_firmware_template(microcontroller: str, task: str) -> dict[str, obj
         "peripheral": peripheral,
         "task": task,
         "embedded_c_code": code,
-        "code": code,
         "explanation": explanation,
         "pin_configuration": pin_configuration,
-        "pins": pin_configuration,
         "supported_peripherals": list(SUPPORTED_PERIPHERALS),
     }
 

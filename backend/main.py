@@ -4,8 +4,7 @@ import logging
 import time
 from uuid import uuid4
 
-from fastapi import FastAPI, Request, Response
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 
 from backend.api.routes import router as api_router
@@ -20,15 +19,6 @@ app = FastAPI(
     title="EmbedGen API",
     version="0.1.0",
     description="AI-assisted embedded firmware generation service.",
-)
-
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
 )
 
 app.include_router(api_router)
@@ -67,9 +57,3 @@ async def log_requests(request: Request, call_next):
 @app.get("/health", tags=["system"])
 def health_check() -> dict[str, str]:
     return {"status": "ok"}
-
-
-@app.options("/{rest_of_path:path}")
-async def preflight_handler(request: Request, rest_of_path: str) -> Response:  # pragma: no cover
-    logger.info("preflight_request path=%s", rest_of_path)
-    return Response(status_code=200)

@@ -1,9 +1,4 @@
-const NAV_ITEMS = [
-  "Firmware Generator",
-  "Code Debugger",
-  "Register Explainer",
-  "Circuit Helper",
-];
+const NAV_ITEMS = ["Code Generator", "Code Debugger", "Register Explainer"];
 
 export function Sidebar({ activeItem, onSelect }) {
   return (

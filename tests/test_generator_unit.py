@@ -27,9 +27,3 @@ def test_explain_registers_no_matches_message() -> None:
     payload = explain_registers("ESP32", "NON_EXISTENT = 1;")
     assert payload["registers"] == []
     assert "No known registers" in payload["message"]
-
-
-def test_generate_firmware_response_aliases() -> None:
-    payload = generate_firmware_template("LPC2148", "Generate UART firmware")
-    assert payload["code"] == payload["embedded_c_code"]
-    assert payload["pins"] == payload["pin_configuration"]
